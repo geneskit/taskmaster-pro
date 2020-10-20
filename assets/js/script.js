@@ -72,6 +72,14 @@ $(".list-group").on("blur", "textarea", function() {
   saveTasks();
 });
 
+// recreate p element
+var taskP = $("<p>")
+  .addClass("m-1")
+  .text(text);
+
+// replace textarea with p element
+$(this).replaceWith(taskP);
+
 // due date was clicked
 $(".list-group").on("click", "span", function() {
   // get current text
@@ -122,14 +130,6 @@ $(".list-group").on("blur", "input[type='text']", function() {
   // replace input with span element
   $(this).replaceWith(taskSpan);
 });
-
-// recreate p element
-var taskP = $("<p>")
-  .addClass("m-1")
-  .text(text);
-
-// replace textarea with p element
-$(this).replaceWith(taskP);
 
 // modal was triggered
 $("#task-form-modal").on("show.bs.modal", function() {
