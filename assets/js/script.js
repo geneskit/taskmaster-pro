@@ -100,7 +100,7 @@ $("#task-form-modal .btn-primary").click(function () {
       .closest("list-group")
       .attr("id")
       .replace("list-group-item")
-      .index();
+      //.index();
 
     var index = $(this)
       .closest(".list-group-item")
